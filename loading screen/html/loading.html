@@ -82,15 +82,9 @@
       }
 
       @keyframes bgPulse {
-        0% {
-          transform: translateZ(0) scale(1);
-        }
-        50% {
-          transform: translateZ(0) scale(1.02);
-        }
-        100% {
-          transform: translateZ(0) scale(1);
-        }
+        0% { transform: translateZ(0) scale(1); }
+        50% { transform: translateZ(0) scale(1.02); }
+        100% { transform: translateZ(0) scale(1); }
       }
 
       .corner-blur {
@@ -106,31 +100,24 @@
       }
 
       .corner-tl {
-        top: 0;
-        left: 0;
-        -webkit-mask-image: radial-gradient(circle at 0% 0%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 34%, transparent 76%);
-        mask-image: radial-gradient(circle at 0% 0%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 34%, transparent 76%);
+        top: 0; left: 0;
+        -webkit-mask-image: radial-gradient(circle at 0% 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 34%, transparent 76%);
+        mask-image: radial-gradient(circle at 0% 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 34%, transparent 76%);
       }
-
       .corner-tr {
-        top: 0;
-        right: 0;
-        -webkit-mask-image: radial-gradient(circle at 100% 0%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 34%, transparent 76%);
-        mask-image: radial-gradient(circle at 100% 0%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 34%, transparent 76%);
+        top: 0; right: 0;
+        -webkit-mask-image: radial-gradient(circle at 100% 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 34%, transparent 76%);
+        mask-image: radial-gradient(circle at 100% 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 34%, transparent 76%);
       }
-
       .corner-bl {
-        bottom: 0;
-        left: 0;
-        -webkit-mask-image: radial-gradient(circle at 0% 100%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 34%, transparent 76%);
-        mask-image: radial-gradient(circle at 0% 100%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 34%, transparent 76%);
+        bottom: 0; left: 0;
+        -webkit-mask-image: radial-gradient(circle at 0% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 34%, transparent 76%);
+        mask-image: radial-gradient(circle at 0% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 34%, transparent 76%);
       }
-
       .corner-br {
-        bottom: 0;
-        right: 0;
-        -webkit-mask-image: radial-gradient(circle at 100% 100%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 34%, transparent 76%);
-        mask-image: radial-gradient(circle at 100% 100%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 34%, transparent 76%);
+        bottom: 0; right: 0;
+        -webkit-mask-image: radial-gradient(circle at 100% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 34%, transparent 76%);
+        mask-image: radial-gradient(circle at 100% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 34%, transparent 76%);
       }
 
       .corner-blur {
@@ -150,20 +137,10 @@
           );
           animation: cornerBlurPulse 3.2s ease-in-out infinite;
         }
-
         @keyframes cornerBlurPulse {
-          0% {
-            -webkit-backdrop-filter: blur(0px);
-            backdrop-filter: blur(0px);
-          }
-          50% {
-            -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
-          }
-          100% {
-            -webkit-backdrop-filter: blur(0px);
-            backdrop-filter: blur(0px);
-          }
+          0% { -webkit-backdrop-filter: blur(0px); backdrop-filter: blur(0px); }
+          50% { -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); }
+          100% { -webkit-backdrop-filter: blur(0px); backdrop-filter: blur(0px); }
         }
       }
 
@@ -182,20 +159,10 @@
           background-blend-mode: screen;
           animation: cornerFilterPulse 2s ease-in-out infinite;
         }
-
         @keyframes cornerFilterPulse {
-          0% {
-            -webkit-filter: blur(0px);
-            filter: blur(0px);
-          }
-          50% {
-            -webkit-filter: blur(8px);
-            filter: blur(8px);
-          }
-          100% {
-            -webkit-filter: blur(0px);
-            filter: blur(0px);
-          }
+          0% { -webkit-filter: blur(0px); filter: blur(0px); }
+          50% { -webkit-filter: blur(8px); filter: blur(8px); }
+          100% { -webkit-filter: blur(0px); filter: blur(0px); }
         }
       }
 
@@ -210,8 +177,7 @@
 
       .logo-progress {
         position: fixed;
-        left: 50%;
-        top: 50%;
+        left: 50%; top: 50%;
         transform: translate3d(-50%, -50%, 0);
         display: grid;
         place-items: center;
@@ -222,8 +188,7 @@
       }
 
       .logo-progress--tl {
-        left: -16px;
-        top: -56px;
+        left: -16px; top: -56px;
         transform: translateZ(0);
         --logo-size: clamp(144px, 28vmin, 300px);
       }
@@ -257,23 +222,12 @@
       }
 
       @keyframes ringIdle {
-        0% {
-          transform: translate3d(0px, 0px, 0) scale(1);
-          opacity: 0.45;
-        }
-        50% {
-          transform: translate3d(0px, 0px, 0) scale(1.015);
-          opacity: 0.62;
-        }
-        100% {
-          transform: translate3d(0px, 0px, 0) scale(1);
-          opacity: 0.45;
-        }
+        0% { transform: translate3d(0px, 0px, 0) scale(1); opacity: 0.45; }
+        50% { transform: translate3d(0px, 0px, 0) scale(1.015); opacity: 0.62; }
+        100% { transform: translate3d(0px, 0px, 0) scale(1); opacity: 0.45; }
       }
 
-      body.is-audio-reactive .audio-ring {
-        animation: none;
-      }
+      body.is-audio-reactive .audio-ring { animation: none; }
 
       .sound-cta {
         position: fixed;
@@ -288,8 +242,8 @@
 
       .sound-cta button {
         appearance: none;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        background: rgba(18, 22, 38, 0.65);
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(18,22,38,0.65);
         color: var(--text);
         padding: 10px 14px;
         border-radius: 999px;
@@ -302,128 +256,72 @@
         backdrop-filter: blur(10px);
       }
 
-      body.needs-user-audio .sound-cta {
-        opacity: 1;
-        pointer-events: auto;
-        transform: translate3d(-50%, 0, 0) scale(1);
-      }
-
-      body.is-loading-done .sound-cta {
-        opacity: 0;
-        pointer-events: none;
-      }
+      body.needs-user-audio .sound-cta { opacity: 1; pointer-events: auto; transform: translate3d(-50%, 0, 0) scale(1); }
+      body.is-loading-done .sound-cta { opacity: 0; pointer-events: none; }
 
       .yt-host {
-        position: fixed;
-        left: -9999px;
-        top: -9999px;
-        width: 1px;
-        height: 1px;
-        opacity: 0;
-        pointer-events: none;
-        overflow: hidden;
+        position: fixed; left: -9999px; top: -9999px;
+        width: 1px; height: 1px; opacity: 0;
+        pointer-events: none; overflow: hidden;
       }
 
       @supports not (aspect-ratio: 1 / 1) {
-        .logo-stage {
-          height: var(--logo-size);
-        }
+        .logo-stage { height: var(--logo-size); }
       }
 
       .logo-img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        display: block;
-        -webkit-user-drag: none;
-        user-select: none;
+        position: absolute; inset: 0;
+        width: 100%; height: 100%;
+        object-fit: contain; display: block;
+        -webkit-user-drag: none; user-select: none;
         z-index: 1;
       }
 
       .logo-fill {
-        position: absolute;
-        inset: 0;
-        overflow: hidden;
+        position: absolute; inset: 0; overflow: hidden;
         -webkit-clip-path: inset(var(--fill-top, 100%) 0 0 0);
         clip-path: inset(var(--fill-top, 100%) 0 0 0);
-        opacity: 0;
-        will-change: clip-path, opacity;
+        opacity: 0; will-change: clip-path, opacity;
         transition: clip-path 140ms linear, -webkit-clip-path 140ms linear, opacity 140ms linear;
       }
 
-      #logoFill,
-      #tagFill {
-        filter: brightness(1.35) contrast(1.12) saturate(1.08);
-      }
+      #logoFill, #tagFill { filter: brightness(1.35) contrast(1.12) saturate(1.08); }
 
-      body.is-loading-done .logo-progress {
-        opacity: 0;
-        transform: translate3d(-50%, -50%, 0) scale(0.98);
-      }
-
-      body.is-loading-done .logo-progress--tl {
-        transform: translateZ(0) scale(0.98);
-      }
+      body.is-loading-done .logo-progress { opacity: 0; transform: translate3d(-50%, -50%, 0) scale(0.98); }
+      body.is-loading-done .logo-progress--tl { transform: translateZ(0) scale(0.98); }
 
       .progress-ui {
-        position: fixed;
-        left: 50%;
-        bottom: 56px;
+        position: fixed; left: 50%; bottom: 56px;
         transform: translate3d(-50%, 0, 0);
         width: min(720px, calc(100% - 48px));
         z-index: 4;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
+        display: flex; flex-direction: column; align-items: center; gap: 12px;
         opacity: 1;
         transition: opacity 650ms ease, transform 650ms ease;
         pointer-events: none;
       }
 
-      body.is-loading-done .progress-ui {
-        opacity: 0;
-        transform: translate3d(-50%, 10px, 0);
-      }
+      body.is-loading-done .progress-ui { opacity: 0; transform: translate3d(-50%, 10px, 0); }
 
       .progress-bar {
-        width: 100%;
-        height: 18px;
-        background: var(--bar-bg);
-        border-radius: 999px;
-        overflow: hidden;
+        width: 100%; height: 18px;
+        background: var(--bar-bg); border-radius: 999px; overflow: hidden;
       }
 
       .progress-bar > div {
-        height: 100%;
-        width: 0%;
-        background: linear-gradient(90deg, var(--bg-solid), rgba(255, 255, 255, 0.75));
-        border-radius: 999px;
-        transition: width 120ms linear;
+        height: 100%; width: 0%;
+        background: linear-gradient(90deg, var(--bg-solid), rgba(255,255,255,0.75));
+        border-radius: 999px; transition: width 120ms linear;
       }
 
       .progress-pct {
-        font-size: 16px;
-        font-weight: 700;
-        letter-spacing: 0.2px;
-        color: var(--text);
-        opacity: 0.9;
+        font-size: 16px; font-weight: 700;
+        letter-spacing: 0.2px; color: var(--text); opacity: 0.9;
       }
 
       @media (prefers-reduced-motion: reduce) {
-        .bg-layer,
-        .corner-blur,
-        .bg-wave,
-        .bg-overlay,
-        .logo-progress {
-          animation: none;
-        }
-
-        .logo-fill {
-          transition: none;
-        }
+        .bg-layer, .corner-blur, .bg-wave, .bg-overlay, .logo-progress { animation: none; }
+        .logo-fill { transition: none; }
       }
     </style>
   </head>
@@ -441,9 +339,7 @@
     <div class="corner-blur corner-br"></div>
     <div class="bg-overlay"></div>
     <audio id="bgm" preload="auto" loop></audio>
-    <div class="yt-host" aria-hidden="true">
-      <div id="ytPlayer"></div>
-    </div>
+    <div class="yt-host" aria-hidden="true"><div id="ytPlayer"></div></div>
     <div class="sound-cta" id="soundCta" aria-hidden="true">
       <button type="button" id="soundBtn">Activer le son</button>
     </div>
@@ -451,17 +347,17 @@
       <div class="logo-progress" id="logoProgress" aria-hidden="true">
         <div class="logo-stage">
           <div class="audio-ring" id="audioRing" aria-hidden="true"></div>
-          <img class="logo-img" src="l1.png" alt="" style="opacity: 0.7" />
+          <img class="logo-img" src="https://dorianrays73-web.github.io/loading-screen/loading%20screen/html/l1.png" alt="" style="opacity: 0.7" />
           <div class="logo-fill" id="logoFill">
-            <img class="logo-img" src="l2.png" alt="" />
+            <img class="logo-img" src="https://dorianrays73-web.github.io/loading-screen/loading%20screen/html/l2.png" alt="" />
           </div>
         </div>
       </div>
       <div class="logo-progress logo-progress--tl" aria-hidden="true">
         <div class="logo-stage">
-          <img class="logo-img" src="t1.png" alt="" style="opacity: 0.7" />
+          <img class="logo-img" src="https://dorianrays73-web.github.io/loading-screen/loading%20screen/html/t1.png" alt="" style="opacity: 0.7" />
           <div class="logo-fill" id="tagFill">
-            <img class="logo-img" src="t2.png" alt="" />
+            <img class="logo-img" src="https://dorianrays73-web.github.io/loading-screen/loading%20screen/html/t2.png" alt="" />
           </div>
         </div>
       </div>
@@ -473,18 +369,27 @@
 
     <script>
       (function () {
+        var BASE = "https://dorianrays73-web.github.io/loading-screen/loading%20screen/html/";
+
         var bgA = document.getElementById("bgA");
         var bgB = document.getElementById("bgB");
-        var bgNames = ["bck1", "bck2", "bck3", "bck4", "bck5", "bck6", "bck7"];
-        var bgExts = [".png", ".jpg", ".jpeg", ".webp"];
+        var bgNames = [
+          BASE + "bck1.png",
+          BASE + "bck2.png",
+          BASE + "bck3.png",
+          BASE + "bck4.png",
+          BASE + "bck5.PNG",
+          BASE + "bck6.PNG",
+          BASE + "bck7.png"
+        ];
         var bgColors = {
-          bck2: { hex: "#FF1493", rgb: "255, 20, 147" },
-          bck1: { hex: "#FFA500", rgb: "255, 165, 0" },
-          bck3: { hex: "#FF4500", rgb: "255, 69, 0" },
-          bck4: { hex: "#00CED1", rgb: "0, 206, 209" },
-          bck5: { hex: "#0055FF", rgb: "0, 85, 255" },
-          bck6: { hex: "#FF4500", rgb: "255, 69, 0" },
-          bck7: { hex: "#E63946", rgb: "230, 57, 70" },
+          "bck2": { hex: "#FF1493", rgb: "255, 20, 147" },
+          "bck1": { hex: "#FFA500", rgb: "255, 165, 0" },
+          "bck3": { hex: "#FF4500", rgb: "255, 69, 0" },
+          "bck4": { hex: "#00CED1", rgb: "0, 206, 209" },
+          "bck5": { hex: "#0055FF", rgb: "0, 85, 255" },
+          "bck6": { hex: "#FF4500", rgb: "255, 69, 0" },
+          "bck7": { hex: "#E63946", rgb: "230, 57, 70" },
         };
         var logoFill = document.getElementById("logoFill");
         var tagFill = document.getElementById("tagFill");
@@ -513,101 +418,67 @@
           try {
             var params = new URLSearchParams(window.location.search || "");
             return params.get(name);
-          } catch (e) {
-            return null;
-          }
-        }
-
-        function bgCandidates(name) {
-          if (!name) return [];
-          if (name.indexOf(".") !== -1) return [name];
-          var out = [];
-          for (var i = 0; i < bgExts.length; i++) out.push(name + bgExts[i]);
-          return out;
+          } catch (e) { return null; }
         }
 
         var bgResolveCache = {};
-        function resolveBgUrl(name, done) {
-          var key = bgKey(name);
-          if (!key) return done("");
-
-          var cached = bgResolveCache[key];
+        function resolveBgUrl(url, done) {
+          if (!url) return done("");
+          var cached = bgResolveCache[url];
           if (cached && cached.state === "ok") return done(cached.url || "");
           if (cached && cached.state === "fail") return done("");
-          if (cached && cached.state === "pending") {
-            cached.cbs.push(done);
-            return;
-          }
+          if (cached && cached.state === "pending") { cached.cbs.push(done); return; }
 
-          var list = bgCandidates(name);
-          bgResolveCache[key] = { state: "pending", url: "", cbs: [done] };
-          var i = 0;
+          bgResolveCache[url] = { state: "pending", url: "", cbs: [done] };
 
-          function finish(state, url) {
-            var entry = bgResolveCache[key];
+          function finish(state, resolvedUrl) {
+            var entry = bgResolveCache[url];
             if (!entry) return;
             entry.state = state;
-            entry.url = url || "";
+            entry.url = resolvedUrl || "";
             var cbs = entry.cbs || [];
             entry.cbs = [];
-            for (var j = 0; j < cbs.length; j++) {
-              try {
-                cbs[j](entry.url);
-              } catch (e) {
-              }
-            }
+            for (var j = 0; j < cbs.length; j++) { try { cbs[j](entry.url); } catch (e) {} }
           }
 
-          function tryNext() {
-            if (i >= list.length) return finish("fail", "");
-            var url = list[i++];
-            var img = new Image();
-            img.onload = function () {
-              finish("ok", url);
-            };
-            img.onerror = function () {
-              tryNext();
-            };
-            img.src = url;
-          }
-
-          tryNext();
+          var img = new Image();
+          img.onload = function () { finish("ok", url); };
+          img.onerror = function () { finish("fail", ""); };
+          img.src = url;
         }
 
-        function bgKey(name) {
-          if (!name) return "";
-          var s = String(name);
-          var dot = s.lastIndexOf(".");
-          if (dot > 0) s = s.slice(0, dot);
-          return s;
+        function bgKey(url) {
+          if (!url) return "";
+          var parts = url.split("/");
+          var file = parts[parts.length - 1];
+          var dot = file.lastIndexOf(".");
+          return dot > 0 ? file.slice(0, dot) : file;
         }
 
-        function setBg(el, name) {
+        function setBg(el, url) {
           var done = arguments.length > 2 ? arguments[2] : null;
           if (!el) return done && done("");
-          var key = bgKey(name);
+          var key = bgKey(url);
           var c = bgColors[key];
           if (c) {
             document.documentElement.style.setProperty("--bg-solid", c.hex);
-            var parts = String(c.rgb || "")
-              .split(",")
-              .map(function (s) {
-                return Math.max(0, Math.min(255, parseInt(String(s).trim(), 10) || 0));
-              });
+            var parts = String(c.rgb || "").split(",").map(function (s) {
+              return Math.max(0, Math.min(255, parseInt(String(s).trim(), 10) || 0));
+            });
             document.documentElement.style.setProperty("--bg-solid-r", String(parts[0] || 0));
             document.documentElement.style.setProperty("--bg-solid-g", String(parts[1] || 0));
             document.documentElement.style.setProperty("--bg-solid-b", String(parts[2] || 0));
           }
-          resolveBgUrl(name, function (url) {
-            if (!url) {
+          resolveBgUrl(url, function (resolvedUrl) {
+            if (!resolvedUrl) {
               el.style.backgroundImage = "none";
               document.documentElement.style.setProperty("--bg-url", "none");
               return done && done("");
             }
-            var safe = url.replace(/"/g, "%22");
+            var safe = resolvedUrl.replace(/"/g, "%22");
             el.style.backgroundImage = 'url("' + safe + '")';
             document.documentElement.style.setProperty("--bg-url", 'url("' + safe + '")');
-            return done && done(url);
+            return done && done(resolvedUrl);
           });
         }
 
@@ -628,40 +499,24 @@
           if (!bgA || !bgB) return;
           if (!list || !list.length) return;
           slideList = list.slice(0);
-          bgIndex = 0;
-          showingA = true;
-          slideInFlight = false;
-          slideToken += 1;
-
+          bgIndex = 0; showingA = true; slideInFlight = false; slideToken += 1;
           bgB.classList.remove("is-visible");
-          setBg(bgA, slideList[0], function () {
-            bgA.classList.add("is-visible");
-          });
+          setBg(bgA, slideList[0], function () { bgA.classList.add("is-visible"); });
 
           var ms = 7000;
-          var raw = getQueryParam("slideMs");
-          var n = parseInt(raw, 10);
-          if (!isNaN(n)) ms = Math.max(700, Math.min(60000, n));
-
           slideIntervalId = setInterval(function () {
             if (slideInFlight) return;
             slideInFlight = true;
             slideToken += 1;
             var token = slideToken;
-
             bgIndex = (bgIndex + 1) % slideList.length;
-            var nextName = slideList[bgIndex];
-
+            var nextUrl = slideList[bgIndex];
             var incoming = showingA ? bgB : bgA;
             var outgoing = showingA ? bgA : bgB;
             incoming.classList.remove("is-visible");
-
-            setBg(incoming, nextName, function (url) {
+            setBg(incoming, nextUrl, function (url) {
               if (token !== slideToken) return;
-              if (!url) {
-                slideInFlight = false;
-                return;
-              }
+              if (!url) { slideInFlight = false; return; }
               incoming.offsetWidth;
               requestAnimationFrame(function () {
                 if (token !== slideToken) return;
@@ -671,11 +526,7 @@
                 slideInFlight = false;
               });
             });
-
-            setTimeout(function () {
-              if (token !== slideToken) return;
-              slideInFlight = false;
-            }, 1600);
+            setTimeout(function () { if (token !== slideToken) return; slideInFlight = false; }, 1600);
           }, ms);
         }
 
@@ -700,101 +551,40 @@
 
         var progressFill = document.getElementById("progressFill");
         var progressPct = document.getElementById("progressPct");
+        var state = { filesTotal: 0, filesNeeded: NaN, filesDone: 0, lastFile: "" };
 
-        var state = {
-          filesTotal: 0,
-          filesNeeded: NaN,
-          filesDone: 0,
-          lastFile: "",
-        };
-
-        function clamp01(n) {
-          if (n < 0) return 0;
-          if (n > 1) return 1;
-          return n;
-        }
+        function clamp01(n) { if (n < 0) return 0; if (n > 1) return 1; return n; }
 
         function setupWaveFill() {
           if (!waveSvg || !wavePath) return;
           if (waveRaf) return;
-
           function resize() {
             waveW = Math.max(1, Math.floor(window.innerWidth || 1));
             waveH = Math.max(1, Math.floor(window.innerHeight || 1));
             waveSvg.setAttribute("viewBox", "0 0 " + waveW + " " + waveH);
           }
-
           function prefersReducedMotion() {
-            try {
-              return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-            } catch (e) {
-              return false;
-            }
+            try { return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; }
+            catch (e) { return false; }
           }
-
           function render(now) {
             if (!waveT0) waveT0 = now;
             var dt = (now - waveT0) / 1000;
-
             progressSmooth = progressSmooth * 0.88 + progressTarget * 0.12;
             if (progressSmooth < 0.001 && progressTarget < 0.001) progressSmooth = 0;
             if (progressSmooth > 0.999 && progressTarget > 0.999) progressSmooth = 1;
-
             var baseY = waveH * (1 - progressSmooth);
-            if (baseY < 0) baseY = 0;
-            if (baseY > waveH) baseY = waveH;
-
+            if (baseY < 0) baseY = 0; if (baseY > waveH) baseY = waveH;
             var amp = prefersReducedMotion() ? 0 : Math.min(52, Math.max(0, waveH * 0.03));
             var freq = (Math.PI * 2) / Math.max(260, waveW * 0.55);
             var phase = prefersReducedMotion() ? 0 : dt * 1.6;
-
-            function yAt(x) {
-              return baseY + Math.sin(phase + x * freq) * amp;
-            }
-
-            var x0 = 0;
-            var x1 = waveW * 0.25;
-            var x2 = waveW * 0.5;
-            var x3 = waveW * 0.75;
-            var x4 = waveW;
-
-            var y0 = yAt(x0);
-            var y1 = yAt(x1);
-            var y2 = yAt(x2);
-            var y3 = yAt(x3);
-            var y4 = yAt(x4);
-
-            var d =
-              "M 0 " +
-              waveH +
-              " L 0 " +
-              y0 +
-              " Q " +
-              x1 +
-              " " +
-              y1 +
-              " " +
-              x2 +
-              " " +
-              y2 +
-              " Q " +
-              x3 +
-              " " +
-              y3 +
-              " " +
-              x4 +
-              " " +
-              y4 +
-              " L " +
-              waveW +
-              " " +
-              waveH +
-              " Z";
-
+            function yAt(x) { return baseY + Math.sin(phase + x * freq) * amp; }
+            var x0=0, x1=waveW*0.25, x2=waveW*0.5, x3=waveW*0.75, x4=waveW;
+            var y0=yAt(x0), y1=yAt(x1), y2=yAt(x2), y3=yAt(x3), y4=yAt(x4);
+            var d = "M 0 "+waveH+" L 0 "+y0+" Q "+x1+" "+y1+" "+x2+" "+y2+" Q "+x3+" "+y3+" "+x4+" "+y4+" L "+waveW+" "+waveH+" Z";
             wavePath.setAttribute("d", d);
             waveRaf = requestAnimationFrame(render);
           }
-
           resize();
           window.addEventListener("resize", resize);
           waveRaf = requestAnimationFrame(render);
@@ -807,7 +597,6 @@
           var jy = (Math.random() * 2 - 1) * jitter;
           var scale = 1 + last * 0.16;
           var blur = 10 + last * 10;
-
           audioRing.style.setProperty("--ring-x", jx.toFixed(2) + "px");
           audioRing.style.setProperty("--ring-y", jy.toFixed(2) + "px");
           audioRing.style.setProperty("--ring-scale", scale.toFixed(4));
@@ -826,9 +615,9 @@
               if (v) return v;
               var parts = (u.pathname || "").split("/").filter(Boolean);
               var idx = parts.indexOf("embed");
-              if (idx !== -1 && parts[idx + 1]) return parts[idx + 1];
+              if (idx !== -1 && parts[idx+1]) return parts[idx+1];
               idx = parts.indexOf("shorts");
-              if (idx !== -1 && parts[idx + 1]) return parts[idx + 1];
+              if (idx !== -1 && parts[idx+1]) return parts[idx+1];
             }
           } catch (e) {}
           if (/^[a-zA-Z0-9_-]{6,}$/.test(s)) return s;
@@ -839,16 +628,9 @@
           if (ytApiLoaded) return done();
           if (ytApiLoading) return;
           ytApiLoading = true;
-
-          window.onYouTubeIframeAPIReady = function () {
-            ytApiLoaded = true;
-            ytApiLoading = false;
-            done();
-          };
-
+          window.onYouTubeIframeAPIReady = function () { ytApiLoaded = true; ytApiLoading = false; done(); };
           var existing = document.querySelector('script[src="https://www.youtube.com/iframe_api"]');
           if (existing) return;
-
           var tag = document.createElement("script");
           tag.src = "https://www.youtube.com/iframe_api";
           tag.async = true;
@@ -859,42 +641,20 @@
           if (audioSetup) return;
           audioSetup = true;
           if (!audioEl || !audioRing) return;
-
           var cfg = window.AudioVizConfig || {};
           var ytUrl = cfg.youtube || getQueryParam("ytb") || "https://youtu.be/2NihzptRjto?si=9YyzsUJSb00BgWx0";
           var ytId = parseYouTubeId(ytUrl);
-          var url = cfg.url || getQueryParam("music") || "music.mp3";
+          var url = cfg.url || getQueryParam("music") || (BASE + "music.mp3");
+          var sensitivity = Number(cfg.sensitivity); if (!isFinite(sensitivity)) sensitivity = 1.35;
+          var volume = Number(cfg.volume); if (!isFinite(volume)) volume = 0.1;
+          var smoothing = Number(cfg.smoothing); if (!isFinite(smoothing)) smoothing = 0.86;
+          var fftSize = Number(cfg.fftSize); if (!isFinite(fftSize)) fftSize = 1024;
+          if (fftSize < 256) fftSize = 256; if (fftSize > 2048) fftSize = 2048;
+          var maxJitter = Number(cfg.maxJitter); if (!isFinite(maxJitter)) maxJitter = 10;
+          var rafId = 0; var last = 0;
 
-          var sensitivity = Number(cfg.sensitivity);
-          if (!isFinite(sensitivity)) sensitivity = 1.35;
-
-          var volume = Number(cfg.volume);
-          if (!isFinite(volume)) volume = 0.1;
-
-          var smoothing = Number(cfg.smoothing);
-          if (!isFinite(smoothing)) smoothing = 0.86;
-
-          var fftSize = Number(cfg.fftSize);
-          if (!isFinite(fftSize)) fftSize = 1024;
-          if (fftSize < 256) fftSize = 256;
-          if (fftSize > 2048) fftSize = 2048;
-
-          var maxJitter = Number(cfg.maxJitter);
-          if (!isFinite(maxJitter)) maxJitter = 10;
-
-          var rafId = 0;
-          var last = 0;
-
-          function stop() {
-            if (rafId) cancelAnimationFrame(rafId);
-            rafId = 0;
-          }
-
-          function setFallback() {
-            stop();
-            document.body.classList.remove("is-audio-reactive");
-            document.body.classList.remove("needs-user-audio");
-          }
+          function stop() { if (rafId) cancelAnimationFrame(rafId); rafId = 0; }
+          function setFallback() { stop(); document.body.classList.remove("is-audio-reactive"); document.body.classList.remove("needs-user-audio"); }
 
           function startFakeLoop() {
             document.body.classList.add("is-audio-reactive");
@@ -903,10 +663,7 @@
               var t = (now - t0) / 1000;
               var base = (Math.sin(t * 3.2) + Math.sin(t * 5.9) * 0.6 + Math.sin(t * 9.1) * 0.25) * 0.5 + 0.5;
               var v = volume;
-              try {
-                if (ytPlayer && typeof ytPlayer.getVolume === "function") v = (ytPlayer.getVolume() || 0) / 100;
-              } catch (e) {}
-
+              try { if (ytPlayer && typeof ytPlayer.getVolume === "function") v = (ytPlayer.getVolume() || 0) / 100; } catch (e) {}
               var target = clamp01(base * 0.65 * sensitivity * (0.35 + v));
               last = last * smoothing + target * (1 - smoothing);
               setRing(last, maxJitter);
@@ -918,20 +675,13 @@
           function startHtml5Analyser() {
             var AC = window.AudioContext || window.webkitAudioContext;
             if (!AC) return;
-
-            var ctx;
-            var analyser;
-            var data;
-
+            var ctx, analyser, data;
             function startLoop() {
               document.body.classList.add("is-audio-reactive");
               function tick() {
                 analyser.getByteTimeDomainData(data);
                 var sum = 0;
-                for (var i = 0; i < data.length; i++) {
-                  var v = (data[i] - 128) / 128;
-                  sum += v * v;
-                }
+                for (var i = 0; i < data.length; i++) { var v = (data[i] - 128) / 128; sum += v * v; }
                 var rms = Math.sqrt(sum / data.length);
                 var target = clamp01(rms * 2.2 * sensitivity);
                 last = last * smoothing + target * (1 - smoothing);
@@ -940,7 +690,6 @@
               }
               tick();
             }
-
             function tryStart() {
               if (audioStarted) return;
               audioStarted = true;
@@ -950,100 +699,42 @@
                 analyser.fftSize = fftSize;
                 analyser.smoothingTimeConstant = Math.max(0, Math.min(0.99, smoothing));
                 data = new Uint8Array(analyser.fftSize);
-
                 var src = ctx.createMediaElementSource(audioEl);
                 src.connect(analyser);
                 analyser.connect(ctx.destination);
-
                 var p = audioEl.play();
                 if (p && typeof p.then === "function") {
-                  p.then(function () {
-                    document.body.classList.remove("needs-user-audio");
-                    startLoop();
-                  }).catch(function () {
-                    audioStarted = false;
-                    document.body.classList.add("needs-user-audio");
-                  });
-                } else {
-                  startLoop();
-                }
-              } catch (e) {
-                setFallback();
-              }
+                  p.then(function () { document.body.classList.remove("needs-user-audio"); startLoop(); })
+                   .catch(function () { audioStarted = false; document.body.classList.add("needs-user-audio"); });
+                } else { startLoop(); }
+              } catch (e) { setFallback(); }
             }
-
-            audioEl.addEventListener("canplay", function () {
-              if (!audioStarted) tryStart();
-            });
-            audioEl.addEventListener("error", function () {
-              setFallback();
-            });
-
-            setTimeout(function () {
-              if (!audioStarted) tryStart();
-            }, 500);
-
-            window.addEventListener("pointerdown", function () {
-              try {
-                if (ctx && ctx.state === "suspended") ctx.resume();
-              } catch (e) {}
-              tryStart();
-            });
-            window.addEventListener("keydown", function () {
-              try {
-                if (ctx && ctx.state === "suspended") ctx.resume();
-              } catch (e) {}
-              tryStart();
-            });
-
-            if (soundBtn) {
-              soundBtn.addEventListener("click", function () {
-                try {
-                  if (ctx && ctx.state === "suspended") ctx.resume();
-                } catch (e) {}
-                tryStart();
-              });
-            }
+            audioEl.addEventListener("canplay", function () { if (!audioStarted) tryStart(); });
+            audioEl.addEventListener("error", function () { setFallback(); });
+            setTimeout(function () { if (!audioStarted) tryStart(); }, 500);
+            window.addEventListener("pointerdown", function () { try { if (ctx && ctx.state === "suspended") ctx.resume(); } catch (e) {} tryStart(); });
+            window.addEventListener("keydown", function () { try { if (ctx && ctx.state === "suspended") ctx.resume(); } catch (e) {} tryStart(); });
+            if (soundBtn) { soundBtn.addEventListener("click", function () { try { if (ctx && ctx.state === "suspended") ctx.resume(); } catch (e) {} tryStart(); }); }
           }
 
           function startYouTube() {
             if (!ytId || !ytPlayerEl) return false;
             audioMode = "youtube";
             document.body.classList.add("needs-user-audio");
-
             function initPlayer() {
               try {
                 ytPlayer = new YT.Player(ytPlayerEl, {
-                  height: "1",
-                  width: "1",
-                  videoId: ytId,
-                  playerVars: {
-                    autoplay: 1,
-                    controls: 0,
-                    disablekb: 1,
-                    fs: 0,
-                    iv_load_policy: 3,
-                    modestbranding: 1,
-                    playsinline: 1,
-                    rel: 0,
-                  },
+                  height: "1", width: "1", videoId: ytId,
+                  playerVars: { autoplay: 1, controls: 0, disablekb: 1, fs: 0, iv_load_policy: 3, modestbranding: 1, playsinline: 1, rel: 0 },
                   events: {
                     onReady: function (e) {
-                      try {
-                        e.target.setVolume(Math.round(Math.max(0, Math.min(1, volume)) * 100));
-                        e.target.playVideo();
-                      } catch (err) {}
+                      try { e.target.setVolume(Math.round(Math.max(0, Math.min(1, volume)) * 100)); e.target.playVideo(); } catch (err) {}
                       document.body.classList.remove("needs-user-audio");
                       startFakeLoop();
                     },
-                    onStateChange: function (e) {
-                      try {
-                        if (e.data === YT.PlayerState.PLAYING) document.body.classList.remove("needs-user-audio");
-                      } catch (err) {}
-                    },
+                    onStateChange: function (e) { try { if (e.data === YT.PlayerState.PLAYING) document.body.classList.remove("needs-user-audio"); } catch (err) {} },
                     onError: function () {
-                      ytPlayer = null;
-                      setFallback();
+                      ytPlayer = null; setFallback();
                       audioMode = "html5";
                       audioEl.src = url;
                       audioEl.volume = Math.max(0, Math.min(1, volume));
@@ -1051,25 +742,11 @@
                     },
                   },
                 });
-              } catch (e) {
-                ytPlayer = null;
-                return false;
-              }
+              } catch (e) { ytPlayer = null; return false; }
               return true;
             }
-
-            loadYouTubeApi(function () {
-              initPlayer();
-            });
-
-            if (soundBtn) {
-              soundBtn.addEventListener("click", function () {
-                try {
-                  if (ytPlayer && typeof ytPlayer.playVideo === "function") ytPlayer.playVideo();
-                } catch (e) {}
-              });
-            }
-
+            loadYouTubeApi(function () { initPlayer(); });
+            if (soundBtn) { soundBtn.addEventListener("click", function () { try { if (ytPlayer && typeof ytPlayer.playVideo === "function") ytPlayer.playVideo(); } catch (e) {} }); }
             return true;
           }
 
@@ -1081,37 +758,17 @@
           }
         }
 
-        function emit(name, detail) {
-          try {
-            window.dispatchEvent(new CustomEvent(name, { detail: detail || {} }));
-          } catch (e) {}
-        }
-
-        function onStart() {
-          if (hasStarted) return;
-          hasStarted = true;
-          emit("loading:start", {});
-          setupAudioReactive();
-        }
-
-        function onDone() {
-          if (hasFinished) return;
-          hasFinished = true;
-          document.body.classList.add("is-loading-done");
-          emit("loading:done", {});
-        }
+        function emit(name, detail) { try { window.dispatchEvent(new CustomEvent(name, { detail: detail || {} })); } catch (e) {} }
+        function onStart() { if (hasStarted) return; hasStarted = true; emit("loading:start", {}); setupAudioReactive(); }
+        function onDone() { if (hasFinished) return; hasFinished = true; document.body.classList.add("is-loading-done"); emit("loading:done", {}); }
 
         function getProgress01() {
           var total = Number(state.filesTotal) || 0;
           if (total <= 0) return 0;
-
           var needed = Number(state.filesNeeded);
           var done = Number(state.filesDone) || 0;
-
           if (!isNaN(needed) && needed >= 0) done = total - needed;
-          if (done < 0) done = 0;
-          if (done > total) done = total;
-
+          if (done < 0) done = 0; if (done > total) done = total;
           return clamp01(done / total);
         }
 
@@ -1137,7 +794,6 @@
             if (progressPct) progressPct.textContent = "0%";
             return;
           }
-
           var p01 = getProgress01();
           updateLogoProgress(p01);
           var pct = Math.round(clamp01(p01) * 100);
@@ -1145,64 +801,16 @@
           if (progressPct) progressPct.textContent = pct + "%";
         }
 
-        function setStatus(text) {
-        }
-
-        window.GameDetails = function (serverName, serverUrl, mapName, maxPlayers, steamId, gameMode) {
-          onStart();
-        };
-
-        window.SetStatusChanged = function (status) {
-          onStart();
-          setStatus(status);
-        };
-
-        window.SetFilesTotal = function (total) {
-          onStart();
-          state.filesTotal = Number(total) || 0;
-          updateProgress();
-        };
-
-        window.SetFilesNeeded = function (needed) {
-          onStart();
-          state.filesNeeded = Number(needed) || 0;
-          updateProgress();
-        };
-
+        window.GameDetails = function (serverName, serverUrl, mapName, maxPlayers, steamId, gameMode) { onStart(); };
+        window.SetStatusChanged = function (status) { onStart(); };
+        window.SetFilesTotal = function (total) { onStart(); state.filesTotal = Number(total) || 0; updateProgress(); };
+        window.SetFilesNeeded = function (needed) { onStart(); state.filesNeeded = Number(needed) || 0; updateProgress(); };
         window.DownloadingFile = function (fileName) {
           onStart();
           state.lastFile = fileName || "";
           if (!(Number(state.filesTotal) > 0) || isNaN(Number(state.filesNeeded))) state.filesDone += 1;
           updateProgress();
         };
-
-        (function simulateLoadingPreview() {
-          function isPreview() {
-            try {
-              return new URLSearchParams(window.location.search || "").has("preview");
-            } catch (e) {
-              return false;
-            }
-          }
-          if (!isPreview()) return;
-
-          onStart();
-          window.SetFilesTotal(100);
-          window.SetFilesNeeded(100);
-
-          var pct = 0;
-          var timer = setInterval(function () {
-            pct += 1;
-            if (pct > 100) pct = 100;
-
-            state.filesNeeded = 100 - pct;
-            updateProgress();
-
-            if (pct >= 100) {
-              clearInterval(timer);
-            }
-          }, 650);
-        })();
 
         updateProgress();
         setupAudioReactive();
