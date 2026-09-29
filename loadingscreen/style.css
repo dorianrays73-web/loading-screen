@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+/* 1rem = 1% de la hauteur d'écran (défini en JS), compatible avec les vieux navigateurs GMod */
+
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html, body {
+  width: 100%; height: 100%; overflow: hidden;
+  background: #05050a;
+  -webkit-user-select: none; user-select: none; cursor: default;
+}
+
+#bg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+
+#vignette {
+  position: absolute; left: 0; top: 0; right: 0; bottom: 0; pointer-events: none;
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 50%, rgba(0,0,0,.7) 100%);
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,.7) 100%);
+}
+
+#shade {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 22%; pointer-events: none;
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.8));
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8));
+}
+
+/* ---------- Barre de chargement (katana) ---------- */
+
+#loader {
+  position: absolute; left: 18%; right: 18%; bottom: 6%;
+  -webkit-animation: rise 1.2s ease-out .4s both; animation: rise 1.2s ease-out .4s both;
+}
+
+#katana { position: relative; height: 5.2rem; }
+
+#tsuka {
+  position: absolute; left: 0; top: 1.3rem; width: 15.6%; height: 2.6rem;
+  border-radius: .5rem 1.2rem 1.2rem .5rem;
+  border-left: .9rem solid #2a2420;
+  background-color: #15110f;
+  background-image: -webkit-repeating-linear-gradient(45deg, rgba(255,255,255,.10) 0px, rgba(255,255,255,.10) 7px, transparent 7px, transparent 14px),
+                    -webkit-repeating-linear-gradient(-45deg, rgba(0,0,0,.55) 0px, rgba(0,0,0,.55) 7px, transparent 7px, transparent 14px);
+  background-image: repeating-linear-gradient(45deg, rgba(255,255,255,.10) 0px, rgba(255,255,255,.10) 7px, transparent 7px, transparent 14px),
+                    repeating-linear-gradient(-45deg, rgba(0,0,0,.55) 0px, rgba(0,0,0,.55) 7px, transparent 7px, transparent 14px);
+  box-shadow: inset 0 .4rem .6rem rgba(255,255,255,.08), inset 0 -.5rem .6rem rgba(0,0,0,.6), 0 .4rem 1.2rem rgba(0,0,0,.7);
+}
+
+#tsuba {
+  position: absolute; left: 15.6%; top: 0; width: 1.4rem; height: 5.2rem;
+  border-radius: .7rem; background: #0c0c0c; border: .25rem solid #3fa9f5;
+  box-shadow: 0 0 1.4rem rgba(0,0,0,.8);
+  -webkit-transition: border-color .6s; transition: border-color .6s;
+}
+
+#habaki {
+  position: absolute; left: 17%; top: 1.35rem; width: 1.6%; height: 2.5rem; border-radius: .2rem;
+  background: -webkit-linear-gradient(top, #f3d27a, #a8782a 60%, #6b4a17);
+  background: linear-gradient(to bottom, #f3d27a, #a8782a 60%, #6b4a17);
+}
+
+#blade {
+  position: absolute; left: 18.6%; right: 0; top: 1.5rem; height: 2.2rem; overflow: hidden;
+  border-top-right-radius: 7rem 2.2rem; border-bottom-right-radius: .3rem;
+  background: -webkit-linear-gradient(top, #5d646c 0%, #cfd7df 38%, #f3f7fb 48%, #9aa3ad 62%, #4a5057 100%);
+  background: linear-gradient(to bottom, #5d646c 0%, #cfd7df 38%, #f3f7fb 48%, #9aa3ad 62%, #4a5057 100%);
+  box-shadow: 0 .3rem 1.2rem rgba(0,0,0,.75);
+}
+
+#blade-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; overflow: hidden; }
+#blade-shine {
+  position: absolute; top: 0; bottom: 0; left: -30%; width: 18rem;
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,.6), rgba(255,255,255,0));
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,.6), rgba(255,255,255,0));
+  -webkit-animation: shine 2.6s ease-in-out infinite; animation: shine 2.6s ease-in-out infinite;
+}
+
+#hamon {
+  position: absolute; left: 0; right: 0; bottom: 20%; height: 26%;
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.35), rgba(255,255,255,0));
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,.35), rgba(255,255,255,0));
+}
+
+#blade-tip { position: absolute; left: 18.6%; top: 2.6rem; width: 0; height: 0; }
+#tip-glow {
+  position: absolute; left: -1.2rem; top: -1.2rem; width: 2.4rem; height: 2.4rem; border-radius: 50%;
+  background: -webkit-radial-gradient(center, circle, #fff 0%, rgba(255,255,255,.6) 30%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(circle, #fff 0%, rgba(255,255,255,.6) 30%, rgba(255,255,255,0) 70%);
+  opacity: 0;
+}
+
+@-webkit-keyframes rise { from { opacity: 0; -webkit-transform: translateY(2.5rem); } to { opacity: 1; -webkit-transform: translateY(0); } }
+@keyframes rise { from { opacity: 0; transform: translateY(2.5rem); } to { opacity: 1; transform: translateY(0); } }
+
+@-webkit-keyframes shine { from { left: -30%; } to { left: 110%; } }
+@keyframes shine { from { left: -30%; } to { left: 110%; } }
